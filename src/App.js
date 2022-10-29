@@ -1,5 +1,5 @@
 import "./styles/App.css";
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Axios from 'axios';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -9,7 +9,7 @@ function App() {
   if (process.env.REACT_APP_BACKEND_URL) {
     Axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL;
     }
-    
+
   const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const [date, setDate] = useState('');
   const [swh, setSWH] = useState('');
@@ -19,6 +19,12 @@ function App() {
   const [scheduleList, setScheduleList] = useState([]);
 
   const [newPlan, setNewPlan] = useState('');
+
+  function docTitles() {
+    useEffect(() => {
+      document.title = 'The Calm Planner';
+    });
+  }
 
   const addSchedule = (e) => {
     e.preventDefault();
