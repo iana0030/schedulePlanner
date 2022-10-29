@@ -1,7 +1,6 @@
 import "./styles/App.css";
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import Axios from 'axios';
-import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import UpdateIcon from '@mui/icons-material/Update';
 
@@ -19,12 +18,6 @@ function App() {
   const [scheduleList, setScheduleList] = useState([]);
 
   const [newPlan, setNewPlan] = useState('');
-
-  function DocTitles() {
-    useEffect(() => {
-      document.title = 'The Calm Planner';
-    });
-  }
 
   const addSchedule = (e) => {
     e.preventDefault();
