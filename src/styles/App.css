@@ -1,0 +1,248 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+@media only screen and (min-width: 800px) {
+  .App main {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+  .App main section {
+    margin: 1vw 5vw;
+  }
+  .App main .del_edit {
+    display: table-cell !important;
+  }
+  .App main table {
+    margin: 2rem;
+  }
+  .App main table th {
+    padding: 1rem !important;
+  }
+  .App main table th:nth-child(1) {
+    width: 14%;
+  }
+  .App main table th:nth-child(2) {
+    width: 18%;
+  }
+  .App main table th:nth-child(3) {
+    width: auto;
+  }
+  .App main table th:nth-child(4) {
+    width: 15%;
+  }
+  .App main table th:nth-child(5) {
+    width: 20%;
+  }
+  .App main table td, .App main table th {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  .App main table td span, .App main table th span {
+    margin: 0.5rem;
+    margin-right: 1rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .App main {
+    max-width: 1400px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Mono", monospace;
+  background-color: #F7EDE2;
+  color: #50504d;
+}
+
+.App header {
+  text-align: center;
+  background-color: #432818;
+  color: #dab479;
+  padding: 1rem;
+}
+
+.hide {
+  max-height: 0 !important;
+  overflow: hidden;
+  transition: max-height 1s ease-out !important;
+}
+
+.hidden_mode {
+  display: none !important;
+}
+
+.icon {
+  color: #718355;
+  margin: 0.2rem 0;
+}
+.icon:hover {
+  opacity: 70%;
+}
+
+.App {
+  margin-bottom: 4vh;
+}
+.App main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.App main .del_edit {
+  display: none;
+}
+.App main .del_edit .icons {
+  text-align: right;
+}
+.App main hr {
+  background-color: #718355;
+  color: #718355;
+  border-top: thin solid #718355;
+  margin: 0 1.5rem;
+}
+.App main section {
+  padding: 1rem;
+  word-break: break-word;
+}
+.App main section #about {
+  cursor: pointer;
+}
+.App main section #about:hover {
+  opacity: 70%;
+  transition: 0.5s;
+}
+.App main section #more_info {
+  max-height: 1000vh;
+  transition: max-height 1s ease-in;
+}
+.App main section h2 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+.App main section ul {
+  padding-left: 2rem;
+  list-style-type: "—⠀";
+}
+.App main section ul li {
+  margin-bottom: 0.2rem;
+}
+.App main section p {
+  margin-bottom: 1rem;
+}
+.App h1 {
+  color: #dab479;
+}
+.App .input_info {
+  margin: 4vw 5vw;
+}
+.App .input_info .input_set {
+  display: flex;
+  flex-direction: column;
+}
+.App .input_info label {
+  font-size: 1.3rem;
+}
+.App .input_info input, .App .input_info textarea {
+  margin-bottom: 0.7rem;
+  display: block;
+  width: 100%;
+  height: 4vw;
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  font-family: "Cutive Mono", monospace;
+  border: 1px solid #718355;
+  border-radius: 3px;
+  background-color: #ece8d9;
+  color: #686763;
+}
+.App .input_info textarea {
+  resize: none;
+  height: 5rem;
+  padding: 0.5rem 1rem;
+}
+.App .input_info textarea::-webkit-scrollbar {
+  display: none;
+}
+.App .input_info .btn_set {
+  text-align: center;
+  white-space: nowrap;
+}
+.App .input_info .btn_set button {
+  font-size: 1rem;
+  background-color: #718355;
+  color: #ece8d9;
+  border: none;
+  border-radius: 3px;
+  padding: 0.6rem;
+  margin: 0.3rem;
+  cursor: pointer;
+}
+.App table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 1rem;
+}
+.App table th {
+  background-color: #752c19;
+  color: #dab479;
+}
+.App table th:nth-child(1) {
+  width: 22%;
+}
+.App table th:nth-child(2) {
+  width: 23%;
+}
+.App table th:nth-child(4) {
+  width: 20%;
+}
+.App table th:nth-child(5) {
+  width: 10%;
+}
+.App table td, .App table th {
+  border: 1px solid #718355;
+  padding: 0.4rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.8rem;
+}
+.App table td:nth-child(2), .App table th:nth-child(2) {
+  text-align: center;
+}
+.App table td span, .App table th span {
+  display: inline-block;
+  width: 45px;
+  padding: 0.3rem;
+  margin-right: 0.8rem;
+  margin-bottom: 0.4rem;
+  text-align: center;
+  background-color: #899878;
+  color: #E4E6C3;
+  border-radius: 3px;
+}
+.App table tr:nth-child(odd) {
+  background-color: #B1BF9C;
+}
+.App table tr:nth-child(even) {
+  background-color: #CEDBBD;
+}
+.App table textarea {
+  margin-bottom: 0.7rem;
+  display: block;
+  width: 100%;
+  height: 3rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-family: "Cutive Mono", monospace;
+  border: 1px solid #718355;
+  border-radius: 3px;
+  background-color: #ece8d9;
+  color: #686763;
+  resize: none;
+}
+.App table textarea::-webkit-scrollbar {
+  display: none;
+}/*# sourceMappingURL=App.css.map */

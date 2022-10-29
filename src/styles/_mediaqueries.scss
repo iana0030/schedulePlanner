@@ -1,0 +1,55 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+
+@media only screen and (min-width: $breakpoint-small) {
+    .App {
+        main {
+            margin: 0 auto;
+            max-width: 1000px;
+            section {
+                margin: 1vw 5vw;
+            }
+            .del_edit {
+                display: table-cell !important;
+            }
+            table {
+                margin: 2rem;
+                th {
+                    padding: 1rem !important;
+                    &:nth-child(1) {
+                        width: 14%;
+                    }
+                    &:nth-child(2) {
+                        width: 18%;
+                    }
+                    &:nth-child(3) {
+                        width: auto;
+                    }
+                    &:nth-child(4) {
+                        width: 15%;
+                    }
+                    &:nth-child(5) {
+                        width: 20%;
+                    }
+                }
+                td {
+                    font-size: $fontSize;
+                    padding: .5rem 1rem;
+                    span {
+                        margin: .5rem;
+                        margin-right: 1rem;
+                    }
+                }
+        }
+    }
+}
+}
+
+@media only screen and (min-width: $breakpoint-medium) {
+    .App {
+        main {
+            max-width: 1400px;
+        }
+    }
+}

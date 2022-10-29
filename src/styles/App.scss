@@ -1,0 +1,242 @@
+@use './variables' as *;
+@use './mixins' as *;
+@use './mediaqueries';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fontMain;
+    background-color: $colorMainBG;
+    color: $colorBodyTXT;
+}
+
+%header_style{
+    text-align: center;
+    background-color: $colorHeaderBG;
+    color: $colorHeaderTXT;
+    padding: 1rem;
+}
+
+.hide {
+    max-height: 0 !important;
+    overflow: hidden;
+    transition: max-height 1s ease-out !important;
+}
+
+.hidden_mode {
+    display: none !important;
+}
+
+.icon {
+    color: $colorButton;
+    margin: .2rem 0;
+    &:hover {
+        opacity: 70%;
+    }
+}
+
+// .pop_up {
+//     z-index: 100;
+//     position: relative;
+//     top: 25%;
+//     background-color: $colorPopupBG;
+//     padding: 1rem;
+//     border-radius: $borderRad;
+//     text-align: -webkit-center;
+//     button {
+//         display: flex;
+//         align-items: center;
+//         font-size: $fontSize;
+//         // background-color: $colorButton;
+//         color: $colorButtonTXT;
+//         border: none;
+//         border-radius: $borderRad;
+//         padding: .6rem;
+//         margin: .3rem;
+//         cursor: pointer;
+//         .icon {
+//             margin-left: .5rem
+//         }
+//     }
+// }
+
+// .modal {
+//     position: fixed;
+//     width: 100vw;
+//     height: 100vh;
+//     z-index: 10;
+// }
+
+// .pop_up_bg {
+//     position: absolute;
+//     width: 100vw;
+//     height: 100vh;
+//     background-color: $colorModalBG;
+//     opacity: 0.5;
+// }
+
+.App {
+    margin-bottom: 4vh;
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .del_edit {
+            display: none;
+            .icons {
+                text-align: right;
+            }
+        }
+        hr {
+            background-color: $colorHR;
+            color: $colorHR;
+            border-top: thin solid $colorHR;
+            margin: 0 1.5rem;
+        }
+        section {
+            padding: 1rem;
+            word-break: break-word;
+            #about {
+                cursor: pointer;
+                &:hover {
+                    opacity: 70%;
+                    transition: .5s;
+                }
+            }
+            #more_info {
+                max-height: 1000vh;
+                transition: max-height 1s ease-in;
+            }
+            h2 {
+                font-size: $fontSize;
+                margin-bottom: .3rem;
+            }
+            ul {
+                padding-left: 2rem;
+                list-style-type: "\2014 \2800";
+                li {
+                    margin-bottom: .2rem;
+                }
+            }
+            p {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    h1 {
+        color: $colorHeaderTXT;
+    }
+    header {
+        @extend %header_style;
+    }
+    .input_info {
+        margin: 4vw 5vw;
+        .input_set {
+        display: flex;
+        flex-direction: column;
+        }
+        label {
+            font-size: $fontSizeLabels;
+        }
+        input {
+            @include inputFields(block, 100%, 4vw);
+            padding: 1rem .5rem;
+            font-size: $fontSize;
+            font-family: $alternateFont;
+            border: $border;
+            border-radius: $borderRad;
+            background-color: $colorInputFields;
+            color: $colorInputFieldsTXT;
+        }
+        textarea {
+            @extend input;
+            resize: none;
+            height: 5rem;
+            padding: .5rem 1rem;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+        .btn_set {
+            text-align: center;
+            white-space: nowrap;
+            button {
+                font-size: $fontSize;
+                background-color: $colorButton;
+                color: $colorButtonTXT;
+                border: none;
+                border-radius: $borderRad;
+                padding: .6rem;
+                margin: .3rem;
+                cursor: pointer;
+            }
+        }
+    }
+    table {
+        table-layout: fixed;
+        border-collapse: collapse;
+        margin: 1rem;
+        th {
+            @extend td;
+            background-color: $tableHeaderColor;
+            color: $colorHeaderTXT;
+            &:nth-child(1) {
+                width: 22%;
+            }
+            &:nth-child(2) {
+                width: 23%;
+            }
+            &:nth-child(4) {
+                width: 20%;
+            }
+            &:nth-child(5) {
+                width: 10%;
+            }
+        }
+        td {
+            border: $border;
+            padding: .4rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: $fontSizeS;
+            &:nth-child(2) {
+                text-align: center;
+            }
+            span {
+                display: inline-block;
+                width: 45px;
+                padding: .3rem;
+                margin-right: .8rem;
+                margin-bottom: .4rem;
+                text-align: center;
+                background-color: $weekdayColor;
+                color: $weekdayTXTColor;
+                border-radius: $borderRad;
+            }
+        }
+        tr:nth-child(odd) {
+            background-color: $tableORColor;
+        }
+        tr:nth-child(even) {
+            background-color: $tableERColor;
+        }
+        textarea {
+            @include inputFields(block, 100%, 3rem);
+            padding: .5rem;
+            font-size: $fontSizeS;
+            font-family: $alternateFont;
+            border: $border;
+            border-radius: $borderRad;
+            background-color: $colorInputFields;
+            color: $colorInputFieldsTXT;
+            resize: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+}

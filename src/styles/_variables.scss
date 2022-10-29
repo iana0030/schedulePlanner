@@ -1,0 +1,60 @@
+// VARIABLES
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+
+$fontMain: 'DM Mono', monospace;
+$alternateFont: 'Cutive Mono', monospace;
+$fontSize: 1rem;
+$fontSizeS: .8rem;
+$fontSizeLabels: 1.3rem;
+$border: 1px solid #718355;
+$borderRad: 3px;
+
+$colorMainBG: #F7EDE2;
+$colorHeaderBG: #432818;
+$colorPopupBG: #F6BD60;
+$colorModalBG: black;
+$colorHR: #718355;
+
+$tableHeaderColor: #752c19;
+$tableERColor: #CEDBBD;
+$tableORColor: #B1BF9C;
+$weekdayColor: #899878;
+$weekdayTXTColor: #E4E6C3;
+
+$colorHeaderTXT: #dab479;
+$colorBodyTXT: #50504d;
+
+$colorButton: #718355;
+$colorButtonTXT: #ece8d9;
+
+$colorInputFields: #ece8d9;
+$colorInputFieldsTXT: #686763;
+
+
+$breakpoint-small: 800px;
+$breakpoint-medium: 1200px;
+$breakpoint-big: 1500px;
+
+
+
+
+
+// First version of the color palette:
+// $colorMainBG: #F7EDE2;
+// $colorHeaderBG: #F6BD60;
+// $colorPopupBG: #F6BD60;
+// $colorModalBG: black;
+
+// $tableHeaderColor: #F6BD60;
+// $tableERColor: #F5CAC3;
+// $tableORColor: #e99896;
+// $weekdayColor: #98d6c7;
+// $weekdayTXTColor: #E4E6C3;
+// $colorHeaderTXT: #35322d;
+// $colorBodyTXT: #686763;
+// $colorButton: #84A59D;
+// $colorButtonTXT: #ece8d9;
+// $colorInputFields: #ece8d9;
+// $colorInputFieldsTXT: #686763;

@@ -1,0 +1,13 @@
+// MIXINS
+
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin inputFields($display, $width, $height) {
+    margin-bottom: 0.7rem;
+    display: $display;
+    width: $width;
+    height: $height;
+}
