@@ -20,7 +20,7 @@ function App() {
 
   const [newPlan, setNewPlan] = useState('');
 
-  function docTitles() {
+  function DocTitles() {
     useEffect(() => {
       document.title = 'The Calm Planner';
     });
