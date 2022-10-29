@@ -6,7 +6,10 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import UpdateIcon from '@mui/icons-material/Update';
 
 function App() {
-
+  if (process.env.REACT_APP_BACKEND_URL) {
+    Axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL;
+    }
+    
   const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const [date, setDate] = useState('');
   const [swh, setSWH] = useState('');
